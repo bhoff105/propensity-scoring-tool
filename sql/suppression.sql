@@ -33,10 +33,8 @@ CREATE OR REPLACE TABLE customer_data.dm_suppression AS (
       OR country != 'USA'
       OR city IN ('APO', 'FPO', 'DPO')             -- military mail codes
       -- Corporate HQ addresses (internal fulfillment locations, not consumers)
-      OR address ILIKE '%1 OCR%'
-      OR address ILIKE '%OLD COUNTRY RD%'
-      OR address ILIKE '%STEWART AVE%'
-      OR address ILIKE '%JERICHO PLAZA%'
+      OR address ILIKE '%412 BRIARWOOD WAY%'
+      OR address ILIKE '%88 RIDGELINE DR%'
       -- Missing required fields
       OR first_name IS NULL OR TRIM(first_name) IN ('', '.')
       OR last_name  IS NULL OR TRIM(last_name)  IN ('', '.')
@@ -53,8 +51,8 @@ CREATE OR REPLACE TABLE customer_data.dm_suppression AS (
     SELECT DISTINCT enterprise_id
     FROM customer_data.vw_order_header
     WHERE
-      email_address ILIKE '%@retailer.com%'
-      OR email_address ILIKE '%@subsidiary-brand.com%'
+      email_address ILIKE '%@briarwoodgoods.com%'
+      OR email_address ILIKE '%@briarwoodfulfillment.com%'
       -- Add additional internal domains here as needed
   ),
 

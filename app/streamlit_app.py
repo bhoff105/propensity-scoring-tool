@@ -1,5 +1,5 @@
 """
-Sable & Co. Campaign Intelligence
+Briarwood Goods Co. Campaign Intelligence
 Propensity Scoring Tool · Spring Collection 2026
 
 Four-page Streamlit dashboard (sidebar radio navigation):
@@ -37,7 +37,7 @@ GRAY     = "#9CA3AF"
 
 # -- Page config --------------------------------------------------------------
 st.set_page_config(
-    page_title="Sable & Co. | Campaign Intelligence",
+    page_title="Briarwood Goods Co. | Campaign Intelligence",
     page_icon=None,
     layout="wide",
     initial_sidebar_state="expanded",
@@ -755,7 +755,7 @@ with st.sidebar:
     st.markdown("""
     <div style="padding: 4px 0 2px 0;">
         <div style="font-family: 'DM Serif Display', Georgia, serif; font-size: 22px; font-weight: 400; color: #FFFFFF; letter-spacing: -0.2px; line-height: 1.2;">
-            Sable &amp; Co.
+            Briarwood Goods Co.
         </div>
         <div style="font-size: 10px; font-weight: 600; color: #D97706; text-transform: uppercase; letter-spacing: 0.12em; margin-top: 5px;">
             Campaign Intelligence
@@ -834,10 +834,10 @@ with tab1:
     <div style="padding: 28px 0 16px 0;">
         <div class="section-label">SPRING COLLECTION 2026 &middot; MOTHER'S DAY GIFT WINDOW</div>
         <h1 style="font-family: 'DM Serif Display', Georgia, serif; font-size: 34px; font-weight: 400; color: #111827; line-height: 1.2; margin: 8px 0 16px 0; letter-spacing: -0.3px;">
-            A purchase propensity model built for Sable &amp; Co.
+            A purchase propensity model built for Briarwood Goods Co.
         </h1>
         <p style="font-size: 15px; color: #4B5563; max-width: 720px; line-height: 1.65; margin: 0;">
-            The Spring Collection propensity model ranks all 10,000 customers in the Sable &amp; Co.
+            The Spring Collection propensity model ranks all 10,000 customers in the Briarwood Goods Co.
             file by purchase likelihood. Each score is attributed to three behavioral signals, enabling
             the marketing team to align send timing and message type with the underlying driver for
             each segment.
@@ -940,7 +940,7 @@ with tab1:
     st.markdown("""
     <p style="font-size: 14px; color: #4B5563; max-width: 760px; line-height: 1.7; margin: 0;">
         The Spring Collection propensity model combines these three signals to produce a single
-        ranked conversion likelihood for every customer in the Sable &amp; Co. file. Crucially,
+        ranked conversion likelihood for every customer in the Briarwood Goods Co. file. Crucially,
         it also tells you <em>which</em> signal is carrying the most weight for each customer &mdash;
         because a top-ranked customer driven by seasonal history requires a different message than
         one showing sudden recent momentum. Both belong in the campaign; they should not receive
@@ -1164,7 +1164,7 @@ with tab2:
         </h2>
         <p style="font-size: 14px; color: #4B5563; max-width: 720px; line-height: 1.65; margin: 0 0 12px 0;">
             This deliverable contains conversion likelihood rankings and score driver breakdowns
-            for all 10,000 customers in the Sable &amp; Co. Spring Collection audience. Apply tier
+            for all 10,000 customers in the Briarwood Goods Co. Spring Collection audience. Apply tier
             assignments to determine send priority and tailor message sequencing by segment.
         </p>
         <p style="font-size: 14px; color: #4B5563; max-width: 720px; line-height: 1.65; margin: 0;">
@@ -1368,7 +1368,7 @@ reduces cost and protects sender reputation with no material impact on campaign 
     st.download_button(
         label="Download Scored File",
         data=csv_buf.getvalue(),
-        file_name="sable_spring_2026_scored.csv",
+        file_name="briarwood_spring_2026_scored.csv",
         mime="text/csv",
     )
 
@@ -1394,7 +1394,7 @@ with tab3:
             Segment Explorer
         </h2>
         <p style="font-size: 14px; color: #4B5563; max-width: 680px; line-height: 1.65; margin: 0 0 12px 0;">
-            Filter the scored Sable &amp; Co. Spring Collection audience by tier, primary score
+            Filter the scored Briarwood Goods Co. Spring Collection audience by tier, primary score
             driver, and minimum propensity score. Use this view to build message-specific
             sub-segments, answer ad hoc audience questions, or validate targeting assumptions
             before the campaign launches.
@@ -1620,7 +1620,7 @@ with tab4:
             rather than recency or spend heuristics.
         </p>
         <p>
-            For Sable &amp; Co.'s Spring Collection, the objective is to identify customers most
+            For Briarwood Goods Co.'s Spring Collection, the objective is to identify customers most
             likely to purchase in the Mother's Day gift window, rank them by conversion likelihood,
             and explain what is driving each score so that creative and messaging can be tailored
             to the signal rather than sent generically.

@@ -116,6 +116,8 @@ These are written for a Snowflake-compatible SQL dialect and use generic table n
 
 ## Background
 
-This tool is based on a propensity scoring pipeline built for a national multi-brand retailer's direct marketing program. The pipeline scored millions of repeat customers per campaign cycle across multiple brand divisions, with model validation running after each campaign to track decile lift over time.
+This tool is modeled after a propensity scoring pipeline built for **Briarwood Goods Co.**, a small DTC ecommerce retailer selling outdoor lifestyle, home, and seasonal gift products. Founded in 2018 and headquartered in Asheville, NC, Briarwood operates a direct marketing program with roughly 55,000 active customers across email and direct mail channels. The company runs 15–20 campaigns per year — seasonal catalog drops, holiday windows, Mother's Day, and summer clearance — where the core planning question is always the same: who do you target, and with what message?
 
-The portfolio version runs entirely on synthetic data — no real customer records are included or required.
+The pipeline scored the full customer file ahead of each campaign window, with model validation running after each send to track decile lift over time.
+
+Briarwood Goods Co. is a fictional company. The portfolio version runs entirely on synthetic data — no real customer records are included or required.
