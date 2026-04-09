@@ -492,6 +492,7 @@ def metric_card(label: str, value: str, sub: str = "", accent: bool = False) -> 
     """
 
 
+@st.cache_data
 def load_and_score_sample() -> pd.DataFrame:
     df = pd.read_csv(SAMPLE_DATA_PATH)
     scored = score(df, MODEL_PATH)
@@ -1158,7 +1159,7 @@ with tab2:
     # -- Header ---------------------------------------------------------------
     st.markdown("""
     <div style="padding: 28px 0 16px 0;">
-        <div class="section-label">SABLE &amp; CO. &middot; CAMPAIGN DELIVERABLE</div>
+        <div class="section-label">BRIARWOOD GOODS CO. &middot; CAMPAIGN DELIVERABLE</div>
         <h2 style="font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; color: #111827; margin: 8px 0 10px 0;">
             Spring Collection 2026 Scored Output
         </h2>
@@ -1380,8 +1381,17 @@ reduces cost and protects sender reputation with no material impact on campaign 
     )
     preview = download_df.head(100)
     st.dataframe(
-        preview.style.background_gradient(subset=["Conversion Likelihood"], cmap="Blues"),
+        preview,
         use_container_width=True,
+        column_config={
+            "Conversion Likelihood": st.column_config.ProgressColumn(
+                "Conversion Likelihood",
+                help="Model output (0–1). Higher = more likely to purchase.",
+                format="%.4f",
+                min_value=0,
+                max_value=1,
+            ),
+        },
     )
 
 
